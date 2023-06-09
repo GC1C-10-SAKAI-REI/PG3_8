@@ -14,7 +14,7 @@ void Create();
 //セルの一覧表示
 void Index();
 //任意の位置のアドレスまで辿る関数
-CELL *GetInsertListAddress();
+CELL *GetInsertListAddress(CELL *endcell,int iterator);
 
 int main()
 {
@@ -34,7 +34,26 @@ int main()
 
 		printf("挿入する値を入力してください\n");
 		scanf_s("%d", &inputVal);
+
+		//挿入したいセルのアドレスを取得
+		insertCell = GetInsertListAddress(&head, iterator);
 	}
 
 	return 0;
+}
+
+CELL* GetInsertListAddress(CELL *endcell, int iterator)
+{
+	for (int i = 0; i < iterator; i++)
+	{
+		if (endcell->next)
+		{
+			endcell = endcell->next;
+		}
+		else
+		{
+			break;
+		}
+	}
+	return endcell;
 }
