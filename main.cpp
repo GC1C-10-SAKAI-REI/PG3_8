@@ -18,17 +18,23 @@ CELL *GetInsertListAddress();
 
 int main()
 {
-	//‘}“ü‚·‚é‰ÓŠ
-	int iterator;
-	//‘}“ü‚·‚é’l
-	int inputVal;
-	//
-	CELL *insertCell;
+	int iterator;		//‘}“ü‚·‚é‰ÓŠ
+	int inputVal;		//‘}“ü‚·‚é’l
+	CELL *insertCell;	//
 
 	//æ“ª‚É“à—e‚ª‹ó‚ÌƒZƒ‹‚ğéŒ¾(æ“ª‚Å‚ ‚é‚±‚Æ‚ğ–¾¦‚·‚éˆ×)
 	CELL head;
 	head.prev = nullptr;
 	head.next = nullptr;
+
+	while (true)
+	{
+		printf("‰½”Ô–Ú‚ÌƒZƒ‹‚ÌŒã‚ë‚É‘}“ü‚µ‚Ü‚·‚©H\n");
+		scanf_s("%d", &iterator);
+
+		printf("‘}“ü‚·‚é’l‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢\n");
+		scanf_s("%d", &inputVal);
+	}
 
 	return 0;
 }
