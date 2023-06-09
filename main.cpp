@@ -11,6 +11,10 @@ typedef struct cell
 
 int main()
 {
+	//æ“ª‚É“à—e‚ª‹ó‚ÌƒZƒ‹‚ğéŒ¾(æ“ª‚Å‚ ‚é‚±‚Æ‚ğ–¾¦‚·‚éˆ×)
+	CELL head;
+	head.prev = nullptr;
+	head.next = nullptr;
 
 	return 0;
 }
